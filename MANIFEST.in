@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include grace_period_customer *.css
+recursive-include grace_period_customer *.csv
+recursive-include grace_period_customer *.html
+recursive-include grace_period_customer *.ico
+recursive-include grace_period_customer *.js
+recursive-include grace_period_customer *.json
+recursive-include grace_period_customer *.md
+recursive-include grace_period_customer *.png
+recursive-include grace_period_customer *.py
+recursive-include grace_period_customer *.svg
+recursive-include grace_period_customer *.txt
+recursive-exclude grace_period_customer *.pyc
