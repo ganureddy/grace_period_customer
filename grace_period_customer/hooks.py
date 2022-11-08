@@ -37,6 +37,20 @@ app_license = "MIT"
 # Home Pages
 # ----------
 
+fixtures = [
+    {
+        "dt":
+        "Custom Field",
+        "filters": [[
+            "name",
+            "in",
+            [
+				"Customer-extra_payment_days",
+				"Sales Invoice-grace_period",
+            ]
+        ]]
+    },
+]
 # application home page (will override Website Settings)
 # home_page = "login"
 
@@ -109,7 +123,12 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
-
+doc_events = {
+	"Sales Invoice": {
+		"on_submit":"grace_period_customer.events.sales_invoive_Changes_and_validation_count",
+		"before_submit":"grace_period_customer.events.sales_invoive_Changes_and_validation_count"
+	},
+}
 # Scheduled Tasks
 # ---------------
 
