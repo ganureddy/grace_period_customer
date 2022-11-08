@@ -125,7 +125,7 @@ fixtures = [
 # }
 doc_events = {
 	"Sales Invoice": {
-		"on_submit":"grace_period_customer.events.sales_invoive_Changes_and_validation_count",
+		"on_submit":"grace_period_customer.events.Sales_extra_days_count",
 		"before_submit":"grace_period_customer.events.sales_invoive_Changes_and_validation_count"
 	},
 }
