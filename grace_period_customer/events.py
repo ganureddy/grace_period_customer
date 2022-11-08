@@ -16,7 +16,7 @@ def Sales_extra_days_count(doc,method=None):
         
                
 def sales_invoive_Changes_and_validation_count(doc,method=None):
-    get_sales_invoice = frappe.db.get_list("Sales Invoice",filters={'customer' : doc.customer},fields=['customer','status','name','grand_total','grace_period','posting_date'],order_by='posting_date asc')
+    get_sales_invoice = frappe.db.get_list("Sales Invoice",filters={'customer' : doc.customer,'status' : "Overdue"},fields=['customer','status','name','grand_total','grace_period','posting_date'],order_by='posting_date asc')
     for invoice in get_sales_invoice:
         if invoice.grace_period != None:
             if datetime.date.today() > invoice.grace_period:
